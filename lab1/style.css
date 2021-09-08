@@ -1,0 +1,32 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.paragraph {
+    text-indent: 50px; 
+    font-size: larger;
+    float: left;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+.image_limited_to_original_size {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.regular_text {
+    float: left; 
+    font-size: larger;
+}
+
+.p {
+    margin: 5px;
+}
