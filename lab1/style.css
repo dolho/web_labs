@@ -5,6 +5,10 @@
     width: 50%;
   }
 
+body {
+	background-color: red;
+}
+
 .paragraph {
     text-indent: 50px; 
     font-size: larger;
