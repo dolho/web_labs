@@ -49,7 +49,7 @@ if [ "$REQUEST_METHOD" == 'POST' ]; then
     done
 
     if [ "${array[context]}" == 'LOAD' ]; then
-        FILE_CONTENTS=$( cat ${array[filename]} )
+        FILE_CONTENTS="./current_files/${array[filename]}"
         if [ "${PIPESTATUS[0]}" != "0" ]; then
             FILE_CONTENTS="Error while reading file. Check spelling of the file"
         fi
@@ -125,6 +125,9 @@ if [ "${array[context]}" == 'SAVE' ]; then
         </body>
         </html>
 EOT
+    fi
+fi
+
     fi
 fi
 
