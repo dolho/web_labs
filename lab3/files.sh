@@ -89,7 +89,7 @@ EOT
         
     fi
 if [ "${array[context]}" == 'SAVE' ]; then
-   cp ${array[filename]} "./saved_files/${array[filename]}"
+   cp "./current_files/${array[filename]}" "./saved_files/${array[filename]}"
    echo "${array[change_file]}" > "./current_files/${array[filename]}"
    cat <<EOT
         <!DOCTYPE html>
@@ -127,5 +127,6 @@ if [ "${array[context]}" == 'SAVE' ]; then
 EOT
     fi
 fi
+
 
 
