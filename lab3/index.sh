@@ -5,8 +5,8 @@ echo ""
 if [ "$REQUEST_METHOD" == 'GET' ]; then
     echo "Get method worked"
     DATE="$(date)"
-    UPTIME ="$(uptime -p)"
-    OS_NAME ="$(uname)"
+    UPTIME="$(uptime -p)"
+    OS_NAME="$(uname)"
     USER_NAME="$(whoami)"
     USER_INFO="$(id)"
     HOST_NAME="$(hostname -I)"
@@ -14,7 +14,7 @@ if [ "$REQUEST_METHOD" == 'GET' ]; then
         <!DOCTYPE html>
         <html>
         <head>
-                <title>KP-93, Dolhov</title>
+                <title>Index, KP-93, Dolhov</title>
         </head>
         <body>
                 Today is $DATE <br>
@@ -58,7 +58,7 @@ if [ "$REQUEST_METHOD" == 'POST' ]; then
         <!DOCTYPE html>
         <html>
         <head>
-                <title>KP-93, Dolhov</title>
+                <title>Index, KP-93, Dolhov</title>
         </head>
         <body>
                 Your request: $REQUESTED_COMMAND <br>
@@ -83,3 +83,4 @@ if [ "$REQUEST_METHOD" == 'POST' ]; then
         </html>
 EOT
 fi
+
