@@ -70,7 +70,7 @@ int main()
                 "Not found");
         printf(sPath);
         printf("\n");
-        printf("Request number %d,  Process ID: %d<p>\n", sPath, ++count, getpid());
+        printf("Request number %d,  Process ID: %d<p>\n", ++count, getpid());
         PrintEnv("Request environment", environ);
     }
 }
