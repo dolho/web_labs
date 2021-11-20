@@ -60,14 +60,16 @@ int main()
                     "Request number %d,  Process ID: %d<p>\n", ++count, getpid());
                     PrintEnv("Request environment", environ);
         }
-            printf(sPath);
-        printf("Content-type: text/html\r\n"
+        else {
+                printf("Content-type: text/html\r\n"
                 "\r\n"
-                "Not found");
-        printf(sPath);
-        printf("\n");
-        printf("Request number %d,  Process ID: %d<p>\n", ++count, getpid());
-        PrintEnv("Request environment", environ);
+                "Not found ");
+                printf(sPath);
+                printf("\n");
+                printf("Request number %d,  Process ID: %d<p>\n", ++count, getpid());
+                PrintEnv("Request environment", environ);
+        }
+
     }
 }
 
