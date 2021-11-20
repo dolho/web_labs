@@ -67,8 +67,11 @@ int main()
             printf(sPath);
         printf("Content-type: text/html\r\n"
                 "\r\n"
-                "Not found %s\n"
-                "Request number %d,  Process ID: %d<p>\n", sPath, ++count, getpid());
+                "Not found");
+        printf(sPath);
+        printf("\n");
+        printf("Request number %d,  Process ID: %d<p>\n", sPath, ++count, getpid());
+        PrintEnv("Request environment", environ);
     }
 }
 
