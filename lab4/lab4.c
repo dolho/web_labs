@@ -19,18 +19,14 @@ static void PrintEnv(char *label, char **envp)
 
 int main()
 {
-    char sPath[1024] = "";
-    char *pTmp;
     char **initialEnv = environ;
     int count = 0;
-    if (( pTmp =getenv( "PATH" )) != NULL )
-        strncpy( sPath, pTmp, 1023 );           // Save a copy for our use.
 
     while(FCGI_Accept() == 0)
     {
         char sPath[1024] = "";
         char *pTmp;
-        if ((pTmp = getenv("PATH_INFO")) != NULL)
+        if ((pTmp = getenv("SCRIPT_NAME")) != NULL)
             strncpy(sPath, pTmp, 1023); // Save a copy for our use.
         // char * path = "/";
         char ch;
