@@ -25,8 +25,6 @@ int main()
     int count = 0;
     if (( pTmp =getenv( "PATH" )) != NULL )
         strncpy( sPath, pTmp, 1023 );           // Save a copy for our use.
-    else
-        fprintf( stderr, "No PATH variable set.\n") ;
 
     while(FCGI_Accept() == 0)
     {
@@ -68,8 +66,9 @@ int main()
         }
             printf(sPath);
         printf("Content-type: text/html\r\n"
-                "Not found\r\n"
-                "Request number %d,  Process ID: %d<p>\n", ++count, getpid());
+                "\r\n"
+                "Not found %s\n"
+                "Request number %d,  Process ID: %d<p>\n", sPath, ++count, getpid());
     }
 }
 
