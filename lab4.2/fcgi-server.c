@@ -81,7 +81,7 @@ int main() {
 
       printf("<title>FastCGI echo</title>"
         "<h1>FastCGI echo</h1>\n"
-                                "<a href=\"/~kp9308/fcgi/\">Back to the index page</a>"
+                                "<a href=\"/~kp9221/fcgi/\">Back to the index page</a>"
                                 "<br><br>"
         "Request number %d,  Process ID: %d<p>\n", ++count, getpid());
 
